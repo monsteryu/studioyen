@@ -1,0 +1,735 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	background-color: $white;
+	overflow-x: hidden;
+}
+html{
+	height: 100vh; /* set viewport constraint */
+	min-height: 100%; /* enforce height */
+}
+#container{
+	width: 100%;
+	opacity: 0;
+}
+#fullpage, .section, .slide{
+	width: 100%;
+	height: 100%;
+}
+.black{
+	color:$black;
+}
+.menu-item-black{
+	display: none;
+}
+h1{
+	font-size: 48px;
+}
+h5{
+	font-size: 20px;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x:hidden;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    &.fix{
+    	overflow: hidden;
+    }
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    min-height: 100%;
+}
+
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+.center-container{
+	display:table;
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	.v-center{
+		padding: 30% 0;
+		display: table-cell;
+    	vertical-align: middle;
+	}
+}
+.img_fullwidth{
+	width: 100%;
+	height: auto;
+}
+.fix-bottom{
+	position: fixed;
+	bottom:0px;
+}
+.light{
+	font-weight: 300;
+}
+.text-white{
+	color: $white;
+}
+.padding-container{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.auto-height{
+	overflow: hidden;
+}
+
+#fullpage{
+	.slide{
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-position: center;
+		opacity: 0;
+		&.show{
+			@include transition(all 0.5s ease-in-out);
+			opacity: 1;
+		}
+		&.para{
+			@include transition(all 0.5s ease-in-out);
+			-ms-transform: translate(0,200px); /* IE 9 */
+		   	-webkit-transform: translate(0,200px); /* Safari */
+		    transform: translate(0,200px);
+		}
+	}
+
+	.contact{
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-position: center;
+		color:$white;
+		.container{
+			padding: 20px 15px;
+		}
+
+		a{
+			color: $white;
+			text-decoration:underline;
+		}
+		input,textarea{
+			width: 100%;
+		}
+		input[type=submit]{
+			@include transition(all 0.5s ease-in-out);
+			border-radius: 4px;
+			background-color: rgba(255,255,255,0);
+			border:1px solid rgba(255,255,255,0.5);
+			text-transform: capitalize;
+			padding: 8px 0;
+			&:hover{
+				background-color: rgba(255,255,255,0.3);
+			}
+		}
+		.form-control{
+			background-color: rgba(255,255,255,0.5);
+			color:$white;
+			border:1px solid rgba(255,255,255,0.2);
+		}
+	}
+}
+.about{
+	.row{
+		margin: 2em 0;
+	}
+	h2{
+		margin: 1.2em 0 1em 0;
+		font-size: 3em;
+	}
+	h3{
+		text-align: center;
+		margin-bottom: 30px;
+		letter-spacing: 0.5em;
+	}
+	p{
+		font-size: 1.2em;
+		font-weight: 400;
+		margin: 1em 0;
+	}
+	.about__name{
+		text-align: left;
+	}
+}
+.content{
+	background-color: #fff;
+	position: relative;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+.full_background{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position:top center;
+	height: 100%;
+}
+.product{
+	.product__moneyshot{
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-position:top center;
+		//background-attachment: fixed;
+		height: 100%;
+		p{
+			font-weight: 300;
+		}
+	}
+	.product__title{
+		position: absolute;
+		top:39%;
+		left: 10%;
+	}
+
+	h1,h5{
+		text-transform: capitalize;
+	}
+	h5{
+		font-size: 20px;
+	}
+	p{
+		font-size: 1.2em;
+		font-weight: 400;
+		margin-top: 1em;
+		margin-bottom: 2em; 
+	}
+	.design__caption{
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		margin-top: 5%;
+		text-transform: capitalize;
+		img{
+			max-width: 100%;
+		}
+	}
+	.features__caption{
+		text-align: left;
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	.store__caption{
+		text-transform: capitalize;
+		background-color: $store-gray;
+		color: $white;
+		p{
+			padding: 50px 0;
+			font-weight: 300;
+		}
+		a{
+			@include transition(all 0.5s ease-in-out);
+			color: $black;
+			background-color: $white;
+			border-radius: 4px;
+			padding: 10px 15px;
+			text-decoration: none;
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+	}
+	.spec__caption{
+		h3{
+			text-transform: uppercase;
+			font-size: 1.2em;
+		}
+		li:before{
+			content: '» \0000a0';
+		}
+		a{
+			@include transition(all 0.5s ease-in-out);
+			color: $black;
+			font-weight: 400;
+			text-decoration: none;
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+		.spec__caption__img{
+			padding:20px 0;
+		}
+	}
+}
+.construction{
+	width: 100%;
+	position: fixed;
+	background-color: $store-gray;
+	color: $white;
+	h2{
+		font-weight: 300;
+		text-align: center;
+	}
+}
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	position: fixed;
+	top:0;
+	z-index: 100;
+	width: 100%;
+	text-align: center;	
+}
+
+#logo {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.navbar{
+	top:0;
+	position: fixed;
+	width: 100%;
+	border-radius: 0;
+	margin: 0;
+	padding: 10px 0;
+	@include transition(all 0.5s ease-in-out);
+	&.show{
+		background-color: rgba(0,0,0,0.5);
+		padding:0;
+
+	}
+	&.white.show{
+		background-color: rgba(255,255,255,0.9);
+		padding:0 0 20px 0;
+	}
+	&.upper{
+		top:-150px;
+	}
+	.logo{
+		@include transition(all 0.5s ease-in-out);
+		position: absolute;
+		left: 50%;
+		margin-left: -50px;
+		width: 100px;
+		height: auto;
+		top:10px;
+		&.upper{
+			top:-70px;
+		}
+	}
+	.sub-nav{
+		position: absolute;
+		top:35px;
+		width: 100%;
+		font-size: 1em;
+		@include transition(all 0.5s ease-in-out);
+		visibility: hidden;
+		opacity: 0;
+		li{
+			display: inline-block;
+			margin: 0 0.5em;
+			a{
+				@include transition(all 0.5s ease-in-out);
+				color: $black;
+				text-decoration: none;
+				text-transform: uppercase;
+				&:hover{
+					opacity: 0.5;
+				}
+			}
+		}
+		&.show{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+.navbar__btn{
+	position: relative;
+	padding:0.5em 1.5em;
+	overflow: hidden;
+	color: $white;
+	cursor: pointer;
+	text-transform: uppercase;
+	top:0;
+	span{
+		@include transition(all 0.5s ease-in-out);
+		opacity: 0;
+		margin-top: 5px;
+		padding: 0 10px;
+	}
+	&:hover{
+		opacity: 0.8;
+		span{
+			opacity: 1;
+		}
+	}
+}
+.navbar__btn__menu{
+	right: 0;
+	float: right;
+	span{
+		float: left;
+	}
+}
+.navbar__btn__products{
+	left: 0;
+	float:left;
+	span{
+		float: right;
+	}
+}
+.nav__logo{
+	margin-top: $gap;
+	img{
+		width: 100px;
+		height: auto;
+		margin: 2em;
+	}
+}
+.nav-bg{
+		position: fixed;
+	    overflow: hidden;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	    visibility: hidden;
+	    background-color: $black;
+	    opacity: 0;
+	    @include transition(all 0.5s ease-in-out);
+	    &.show{
+	    	 visibility: visible;
+	    	 opacity: 0.8;
+	    }
+	}
+	.menu-container{
+		height: 100%;
+	}
+	.nav-right{
+		@include transition(all 0.5s ease-in-out);
+		width: 80%;
+		height: 100%;
+		background-color: $white;
+		position: fixed;
+		top:0;
+		left:100%;
+		text-align: center;
+		z-index: 10;
+		&.show{
+			left:20%;
+			overflow-y:auto;
+		}
+		&.hint{
+			left:21%;
+		}
+		
+		.nav-right__list{
+			margin-top: 10%;
+			a{
+				@include transition(all 0.3s ease-in-out);
+				text-transform: uppercase;
+				color: $black;
+				font-size: 1.6em;
+				line-height: 2em;
+				&:hover{
+					opacity: 0.5;
+					text-decoration: none;
+				}
+			}
+		}
+		.nav-right__close{
+			position: absolute;
+			top:1.5em;
+			right:1.5em;
+			z-index: 10;
+			cursor: pointer;
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+	}
+	.nav-left{
+		@include transition(all 0.5s ease-in-out);
+		width: 80%;
+		height: 100%;
+		background-color: $white;
+		position: fixed;
+		top:0;
+		right:100%;
+		text-align: center;
+		z-index: 10;
+		&.show{
+			right:20%;
+			overflow-y:auto;
+			
+		}
+		&.hint{
+			right:21%;
+		}
+		h1{
+			text-transform: uppercase;
+			padding: 0.5em 0;
+			font-size: 2em;
+			//font-weight: 300;
+		}
+		.sub-menu{
+			max-width: 500px;
+			margin: auto;
+		}
+		.nav-left__list{
+			margin-top: 10%;
+			a{
+				text-transform: uppercase;
+				color: $black;
+				font-size: 1.6em;
+				line-height: 2em;
+			}
+		}
+		.nav-left__close{
+			position: absolute;
+			top:1.5em;
+			left: 1.5em;
+			z-index: 10;
+			cursor: pointer;
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+		.nav-left__url{
+			a{
+				width: 100%;
+				height: 100%;
+				display: block;
+				background-color: $white;
+				margin-bottom: 30px;
+				&:hover{
+					img{
+						opacity: 0.5;
+					}
+					.nav-left__title{
+						opacity: 1;
+					}
+				}
+				img{
+					@include transition(all 0.2s ease-in-out);
+					width: 100%;
+					height: auto;
+				}
+				.nav-left__title{
+					@include transition(all 0.2s ease-in-out);
+					position: absolute;
+					top: 50%;
+				    left: 50%;
+				    height: 30%;
+				    width: 50%;
+				    margin: -15% 0 0 -25%;
+				    opacity: 0;
+				    color: $black;
+				}
+			}
+			
+		}
+	}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer{
+	color:$white;
+	width: 100%;
+	font-size: 0.8em;
+	.footer__logo{
+		display:inline-block;
+		margin:auto;
+		img{
+			width: 100px;
+			height: auto;
+			margin-bottom: 10px;
+		}
+	}
+	.footer__bottom{
+		width: 100%;
+		background-color: rgba(0,0,0,0.8);
+		.footer__bottom__copy{
+			margin:0.5em 1em;
+			float: left;
+		}
+		.nav-footer__list{
+			display: inline;
+			li{
+				display: inline-block;
+				margin:0.5em 1em;
+				a{
+					@include transition(all 0.3s ease-in-out);
+					text-transform: capitalize;
+					text-decoration: none;
+					color:$white;
+					&:hover{
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+		
+	}
+} /* end .footer-links */
+
+/*media querys*/
+@media(max-width:767px){
+
+	.center-container{
+		display:table;
+		width: 90%;
+		margin: auto;
+		overflow: hidden;
+		.v-center{
+			padding: 40% 0;
+			display: table-cell;
+	    	vertical-align: middle;
+		}
+	}
+	.navbar{
+		.logo{
+			top:-70px;
+		}
+	}
+	.nav-right{
+		@include transition(all 0.5s ease-in-out);
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		position: fixed;
+		top:0;
+		left: 100%;
+		text-align: center;
+		&.show{
+			left:0;
+			z-index: 10;
+		}
+		.nav-right__list{
+			margin-top: 10%;
+			a{
+				text-transform: uppercase;
+				color: $black;
+				font-size: 1.2em;
+				line-height: 1.6em;
+			}
+			
+		}
+	}
+	.nav-left{
+		@include transition(all 0.5s ease-in-out);
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		position: fixed;
+		top:0;
+		right:100%;
+		text-align: center;
+		&.show{
+			right:0;
+			overflow-y:auto;
+			z-index: 10;
+		}
+		.sub-menu{
+			max-width: 500px;
+			margin: auto;
+		}
+		.nav-left__list{
+			margin-top: 10%;
+			a{
+				text-transform: uppercase;
+				color: $black;
+				font-size: 1.6em;
+				line-height: 2em;
+			}
+		}
+		.nav-left__close{
+			position: absolute;
+			top:50px;
+			left: 10px;
+			z-index: 10;
+		}
+		.nav-left__url{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	///page template
+	.about{
+		h2{
+			font-size: 1.5em;
+		}
+		h3{
+			font-size: 1.2em;
+		}
+		p{
+			font-size: 1em;
+		}
+		.about__name{
+			text-align: right;
+		}
+	}
+	.construction.center-container{
+		width: 100%;
+		height:100%;
+	}
+	
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+

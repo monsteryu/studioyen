@@ -2499,3 +2499,9 @@ if(!function_exists('qode_get_mobile_menu_icon_html')) {
         return $icon_html;
     }
 }
+
+//maowei's custom menu
+function register_my_menu() {
+  register_nav_menu('left-menu',__( 'Left Menu' ));
+}
+add_action( 'init', 'register_my_menu' );

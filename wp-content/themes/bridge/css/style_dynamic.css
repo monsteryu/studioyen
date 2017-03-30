@@ -272,5 +272,10 @@
 
 
 
+    aside.sidebar .widget.widget_text,
+    aside.sidebar .widget p,
+    aside.sidebar .widget div:not(.star-rating) span,
+    aside.sidebar .widget li{
+	color: #ffffff;	}
 
 
