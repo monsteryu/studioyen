@@ -42,9 +42,6 @@
 					
 					<?php comments_template(); ?>
 
-				
-
-
 
 				<?php endwhile; else : ?>
 

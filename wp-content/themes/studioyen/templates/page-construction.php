@@ -18,6 +18,6 @@
 		<h2 class="v-center">
 			The page is currently under construction.<br>
 			We apologize for the inconvenience.
-		</h2>
+		</h2>		
 	</div>
 <?php get_footer(); ?>

@@ -626,7 +626,9 @@ mobile. Make sure to double check these!
 
 /*media querys*/
 @media(max-width:767px){
-
+	h1{
+		font-size: 2em;
+	}
 	.center-container{
 		display:table;
 		width: 90%;
@@ -725,6 +727,10 @@ mobile. Make sure to double check these!
 	.construction.center-container{
 		width: 100%;
 		height:100%;
+		h2{
+			padding-left:10px;
+			padding-right:10px;
+		}
 	}
 	
 }

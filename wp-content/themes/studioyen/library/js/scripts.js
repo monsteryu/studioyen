@@ -5236,6 +5236,7 @@ jQuery(document).ready(function($) {
 	});
 	$('.js-right-bg').click(function(){
 		$( '.nav-right' ).toggleClass( "show" );
+		$( 'body' ).toggleClass( "fix" );
 		$( this ).toggleClass( "show" );
 	});
 	$( ".js-products, .js-nav-left__close" ).click(function() {
@@ -5246,6 +5247,7 @@ jQuery(document).ready(function($) {
 	
 	$('.js-left-bg').click(function(){
 		$( '.nav-left' ).toggleClass( "show" );
+		$( 'body' ).toggleClass( "fix" );
 		$( this ).toggleClass( "show" );
 	});
 	if($('#fullpage').length>0){
@@ -5331,5 +5333,12 @@ jQuery(document).ready(function($) {
 	$(window).resize(function() {
 		$('.js-section').css('height', window.innerHeight+'px');
 	});
+	$("[href='#products']").click(function(){
+			$( '.nav-right' ).toggleClass( "show" );
+			$( '.nav-left' ).toggleClass( "show" );
+			$('.js-right-bg').toggleClass('show');
+	 		$('.js-left-bg').toggleClass('show');
+		}
+	)
 
 }); /* end of as page load scripts */
