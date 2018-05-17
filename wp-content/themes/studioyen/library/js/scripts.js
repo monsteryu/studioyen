@@ -5301,7 +5301,7 @@ jQuery(document).ready(function($) {
 	   var st = $(this).scrollTop();
 	   if (st > lastScrollTop && st>150){
 	   	    //down
-	   		$('.navbar.white').addClass('upper');
+	   		//$('.navbar.white').addClass('upper');
 	   } else {
 	   		//up
 	   		$(".navbar.white").removeClass('upper');
@@ -5334,9 +5334,11 @@ jQuery(document).ready(function($) {
 		$('.js-section').css('height', window.innerHeight+'px');
 	});
 	$("[href='#products']").click(function(){
-			$( '.nav-right' ).toggleClass( "show" );
+			if($( '.nav-right' ).hasClass("show")){
+				$( '.nav-right' ).toggleClass( "show" );
+				$('.js-right-bg').toggleClass('show');
+			}
 			$( '.nav-left' ).toggleClass( "show" );
-			$('.js-right-bg').toggleClass('show');
 	 		$('.js-left-bg').toggleClass('show');
 		}
 	)

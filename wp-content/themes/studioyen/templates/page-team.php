@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Custom Page About
+ Template Name: Custom Page Our Team
  *
  * This is your custom page template. You can create as many of these as you need.
  * Simply name is "page-whatever.php" and in add the "Template Name" title at the
@@ -15,33 +15,34 @@
 
 <?php get_header('about'); ?>
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<div class="full_background para" style="background-image: url(<?php the_field('hero_img'); ?>)";>
-							<div class="center-container">
-								<h2 class="v-center">
-									<?php the_field('title'); ?>
-								</h2>
-							</div>
-						</div>
-						<div class="content">
-							<?php the_field('content'); ?>
-						</div>
+					<div class="team">
 						<div class="center-container">
-							<h3>
-								PURSUE  OUR  CALLING
-							</h3>
+							<h2 class="text-center">
+								Our Team
+							</h2>
 						</div>
 						<div class="container">
 							<div class="row">
-								<div class="col-md-4 col-md-offset-4 ">
-									<img class="img_fullwidth" src="<?php echo get_template_directory_uri(); ?>/library/images/about us_05.jpg">
+								<div class="item">
+									<a href="#">
+										<img src="https://www.studioyen.co/wp-content/uploads/2016/06/EB01.jpg" class="attachment-full size-full wp-post-image" alt="" />
+									</a>
+									<a href="#">
+										Ichao Wang
+									</a>
+								</div>
+								<div class="item">
+									<a href="#">
+										<img src="https://www.studioyen.co/wp-content/uploads/2016/06/EB01.jpg" class="attachment-full size-full wp-post-image" alt="" />
+									</a>
+									<a href="#">
+										Ichao Wang
+									</a>
 								</div>
 							</div>
 						</div>
-					
-					
+					</div>
 					<?php comments_template(); ?>
-
-				
 				<?php endwhile; else : ?>
 
 						<article id="post-not-found" class="hentry cf">

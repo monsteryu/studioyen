@@ -50,7 +50,7 @@
 		<div id="container" class="product">
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				<div class="navbar white ">
-					<?php sub_menu('anchor-menu');?>
+					<?php anchor_menu('anchor-menu');?>
 					<div class="menu-item-white">
 						<div class="js-menu navbar__btn navbar__btn__menu">
 							<img src="<?php echo get_template_directory_uri(); ?>/library/images/btn_menu.svg">

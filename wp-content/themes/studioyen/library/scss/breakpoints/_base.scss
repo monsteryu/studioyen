@@ -27,6 +27,7 @@ html{
 }
 #container{
 	width: 100%;
+	min-height: 100%;
 	opacity: 0;
 }
 #fullpage, .section, .slide{
@@ -44,6 +45,9 @@ h1{
 }
 h5{
 	font-size: 20px;
+}
+p{
+	color:#666;
 }
 
 /*********************
@@ -304,6 +308,58 @@ of those sections to manage the look and feel of the site. */
 		font-weight: 300;
 		text-align: center;
 	}
+}
+.team{
+	margin-top: 90px;
+	text-align: center;
+	.item{
+		margin: 10px 10px;
+		display: inline-block;
+		a{
+			display: block;
+			font-size: 1.2em;
+    		font-weight: 400;
+    		color:#333;
+		}
+	}
+}
+.team-meb{
+	margin-top: 90px;
+	.brief{
+		margin:0;
+	}
+	.exp{
+		p{
+			margin: 0.5em 0;
+		}
+	}
+	h4{
+		margin-top: 50px;
+	}
+}
+.press{
+	margin-top: 90px;
+	.press-hero{
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.press-release{
+		text-align: center;
+		.item{
+			margin: 10px 10px;
+			display: inline-block;
+			a{
+				display: block;
+				font-size: 1.2em;
+	    		font-weight: 400;
+	    		color:#333;
+			}
+		}
+
+	}
+	
 }
 /*********************
 HEADER STYLES
