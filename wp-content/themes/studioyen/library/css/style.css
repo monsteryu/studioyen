@@ -6547,6 +6547,8 @@ of those sections to manage the look and feel of the site. */
   color: #fff; }
   #fullpage .contact .container {
     padding: 20px 15px; }
+  #fullpage .contact p {
+    color: #fff; }
   #fullpage .contact a {
     color: #fff;
     text-decoration: underline; }
@@ -6696,9 +6698,19 @@ of those sections to manage the look and feel of the site. */
 .team {
   margin-top: 90px;
   text-align: center; }
+  .team h2 {
+    margin-bottom: 0; }
   .team .item {
     margin: 10px 10px;
     display: inline-block; }
+    .team .item img {
+      height: 300px;
+      width: auto;
+      -webkit-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+      .team .item img:hover {
+        opacity: 0.6; }
     .team .item a {
       display: block;
       font-size: 1.2em;
@@ -6707,7 +6719,10 @@ of those sections to manage the look and feel of the site. */
 
 .team-meb {
   margin-top: 90px; }
-  .team-meb .brief {
+  .team-meb .pic img {
+    width: 100%;
+    height: auto; }
+  .team-meb .brief p {
     margin: 0; }
   .team-meb .exp p {
     margin: 0.5em 0; }
@@ -6729,6 +6744,14 @@ of those sections to manage the look and feel of the site. */
         font-size: 1.2em;
         font-weight: 400;
         color: #333; }
+      .press .press-release .item img {
+        height: 300px;
+        width: auto;
+        -webkit-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out; }
+        .press .press-release .item img:hover {
+          opacity: 0.6; }
 
 /*********************
 HEADER STYLES

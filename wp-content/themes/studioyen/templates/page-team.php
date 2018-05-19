@@ -22,24 +22,37 @@
 							</h2>
 						</div>
 						<div class="container">
-							<div class="row">
-								<div class="item">
-									<a href="#">
-										<img src="https://www.studioyen.co/wp-content/uploads/2016/06/EB01.jpg" class="attachment-full size-full wp-post-image" alt="" />
-									</a>
-									<a href="#">
-										Ichao Wang
-									</a>
+							<?php if( have_rows('team') ): ?>
+
+								<div class="row">
+
+								<?php while( have_rows('team') ): the_row(); 
+
+									// vars
+									$image = get_sub_field('img');
+									$name = get_sub_field('name');
+									$page_link = get_sub_field('page_link');
+									?>
+
+									<div class="item">
+										<a href="<?php echo $page_link; ?>">
+											<img class="pic" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+										</a>
+										<a href="<?php echo $page_link; ?>">
+											<?php echo $name; ?>
+										</a>
+										</div>
+
+								<?php endwhile; ?>
+
 								</div>
-								<div class="item">
-									<a href="#">
-										<img src="https://www.studioyen.co/wp-content/uploads/2016/06/EB01.jpg" class="attachment-full size-full wp-post-image" alt="" />
-									</a>
-									<a href="#">
-										Ichao Wang
-									</a>
-								</div>
-							</div>
+
+							<?php endif; ?>
+							
+								
+									
+
+
 						</div>
 					</div>
 					<?php comments_template(); ?>

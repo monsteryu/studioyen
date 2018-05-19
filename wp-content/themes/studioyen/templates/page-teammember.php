@@ -18,49 +18,46 @@
 					<div class="team-meb">
 						<div class="container">
 							<div class="row justify-content-center">
-								<div class="col-md-4 col-md-offset-1">
-									<img class="img_fullwidth" src="<?php echo get_template_directory_uri(); ?>/library/images/about us_05.jpg">
-									<p>Changyen Tsai, Designer</p>
+								<div class="col-md-4 col-md-offset-1 pic col-sm-6">
+									<?php 
+									$image = get_field('img');
+									if( !empty($image) ): ?>
+										<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+									<?php endif; ?>
+									<p><?php the_field('name'); ?></p>
 								</div>
-								<div class="col-md-6">
-									<p class="brief">
-										Changyen, born in Taiwan, studied fine arts and graphic design in colledge, and then became a public artist in Taiwan; later on acquired his master degree in industrial design from Pratt Institute. Changyen incorporates his full range of life experiences into his work as philosophical conclusions, and is always looking for the perfect marriage between functionality and aesthetics in his work. Changyen is a core member of Studio Yen; dedicates his life and passion to furniture design.
-									</p>
-									<h4>Experiences:</h4>
-									<div class="exp">
-										<div>
-											<div class="year">1997-2001, Taiwan</div>
-											<p>Bachelor of Art/ National Kaohsiung Normal University</p>
-										</div>
-										<div>
-											<div class="year">1997-2001, Taiwan</div>
-											<p>Bachelor of Art/ National Kaohsiung Normal University</p>
-										</div>
-										<div>
-											<div class="year">2000-2006, Taiwan</div>
-											<p>Art Director/ HMG Mosaic Art Studio</p>
-										</div>
-										<div>
-											<div class="year">2000-2006, Taiwan</div>
-											<p>Art Director/ HMG Mosaic Art Studio</p>
-										</div>
-										<div>
-											<div class="year">2006-2009, NY</div>
-											<p>Master of Industrial Design/ Pratt Institute</p>
-										</div>
-										<div>
-											<div class="year">2007-2012, Taiwan</div>
-											<p>Columnist/Public Art Newsletter Taiwan</p>
-										</div>
-										<div>
-											<div class="year">2014, NJ</div>
-											<p>Founder/ Studio Yen</p>
-										</div>
-										<div>
-											<div class="year">2010-2018, NJ</div>
-											<p>Technical Footwear Designer/Capezio Ballet Makers Inc.</p>
-										</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="brief">
+										<?php the_field('brief'); ?>
 									</div>
+									<h4>Experiences:</h4>
+									
+
+										<?php if( have_rows('experiences') ): ?>
+
+											<div class="exp">
+
+											<?php while( have_rows('experiences') ): the_row(); 
+
+												// vars
+												$year = get_sub_field('year');
+												$experience = get_sub_field('experience');
+												?>
+
+												<div>
+													<?php if( $year ): ?>
+														<div class="year"><?php echo $year; ?></div>
+													<?php endif; ?>
+														<p><?php echo $experience; ?></p>
+												</div>
+
+											<?php endwhile; ?>
+
+											</div>
+
+										<?php endif; ?>
+
+									
 								</div>
 							</div>
 						</div>

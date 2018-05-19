@@ -8,7 +8,7 @@
 				</a>
 			</div>
 			<div class="footer__bottom text-right">	
-				<span class="footer__bottom__copy">© Studio Yen 2016</span>
+				<span class="footer__bottom__copy">© Studio Yen 2018</span>
 				<?php footer_menu('footer-links') ?>
 			</div>
 		</footer>

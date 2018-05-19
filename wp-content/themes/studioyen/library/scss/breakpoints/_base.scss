@@ -145,6 +145,10 @@ of those sections to manage the look and feel of the site. */
 		.container{
 			padding: 20px 15px;
 		}
+		p{
+			color: #fff;
+
+		}
 
 		a{
 			color: $white;
@@ -312,9 +316,20 @@ of those sections to manage the look and feel of the site. */
 .team{
 	margin-top: 90px;
 	text-align: center;
+	h2{
+		margin-bottom:0;
+	}
 	.item{
 		margin: 10px 10px;
 		display: inline-block;
+		img{
+			height: 300px;
+			width:auto;
+			@include transition(all 0.5s ease-in-out);
+			&:hover{
+				opacity: 0.6;
+			};
+		}
 		a{
 			display: block;
 			font-size: 1.2em;
@@ -325,8 +340,16 @@ of those sections to manage the look and feel of the site. */
 }
 .team-meb{
 	margin-top: 90px;
+	.pic{
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
 	.brief{
-		margin:0;
+		p{
+			margin:0;
+		}
 	}
 	.exp{
 		p{
@@ -355,6 +378,14 @@ of those sections to manage the look and feel of the site. */
 				font-size: 1.2em;
 	    		font-weight: 400;
 	    		color:#333;
+			}
+			img{
+				height: 300px;
+				width:auto;
+				@include transition(all 0.5s ease-in-out);
+				&:hover{
+					opacity: 0.6;
+				};
 			}
 		}
 

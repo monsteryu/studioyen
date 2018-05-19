@@ -20,46 +20,52 @@
 								<div class="row">
 									<div class="col-md-8 col-md-offset-2 press-hero">
 									
-										<img class="alignnone size-full wp-image-450" src="http://www.studioyen.co/wp-content/uploads/2016/06/about-us_01.jpg" alt="about-us_01" width="860" height="573">
-										<h2>Hello there!</h2>
-										<p>Studio Yen is thrilled to announce its first product debut at the 30th anniversary of ICFF, featuring the Essential collections, Penn and Horn lamps, and one of the most challenging projects, Storyteller. Storyteller demostrates our design vision through patterning and structural collaboration at Studio Yen; it also provides great opportunities to explore dinamic engineering solutions. With a similar design practice, Penn & Horn lamps represent a clearer geometrical patterning and precise calculations for a better understanding to the transitioning in forms and space. On the contrary, the Essential Collection celebrates the essential beauty of the forms, the function, the craftsmanship and its material characters. These two design fashions have seemingly polarized our design practices, however they also like Ying and Yang, which have coexisted in the world and keeping our life in balance. These parallel themes have run through our core design principles and reflect on who we are at Studio Yen.</p>
-										<h4>Let us tell you about our studio.</h4>
+										<?php 
 
-										<p>After several years of preparation, Studio Yen was founded in 2014 by Ichao Wang and Changyen Tsai in the era of New industrial revolution, along with tetanic social movements around the world. With a team members included Artist, Architect, Craftsman, Designer, Engineer, Musician, Photographer, Programmer, and Scientist, Studio Yen dedicates its core design principles to both ancient wisdom and cutting edge technologies, keeping the balance between scientific researches and timeless design values to improve the quality of our modern life. </p>
-										<h4>The Theme of Patterning, 2018</h4>
-										<p>Our design practices are based on fundamental design principles. With structural patterns, Storyteller, Penn and Horn were created. Changyen is constantly searching for a creative connection between</p>
+										$image = get_field('hero_image');
 
+										if( !empty($image) ): ?>
+
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+										<?php endif; ?>
+										<h2><?php the_field('press_title'); ?></h2>
+										<?php the_field('press_content'); ?>
 
 									</div>
 								</div>
 							</div>
 							<div class="press-release container">
-								<div class="row">
-									<div class="item">
-										<a href="#">
-											<img src="https://www.studioyen.co/wp-content/uploads/2016/06/EB01.jpg" class="attachment-full size-full wp-post-image" alt="" />
-										</a>
-										<a href="#">
-											Ichao Wang
-										</a>
+							<h2 class="text-center">
+								Press Release
+							</h2>
+								<?php if( have_rows('press_release') ): ?>
+
+									<div class="row">
+
+									<?php while( have_rows('press_release') ): the_row(); 
+
+										// vars
+										$image = get_sub_field('img');
+										$title = get_sub_field('title');
+										$file = get_sub_field('file');
+										?>
+
+										<div class="item">
+											<a target="_blank" href="<?php echo $file['url']; ?>">
+												<img class="pic" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+											</a>
+											<a target="_blank" href="<?php echo $file['url']; ?>">
+												<?php echo $title; ?>
+											</a>
+											</div>
+
+									<?php endwhile; ?>
+
 									</div>
-									<div class="item">
-										<a href="#">
-											<img src="https://www.studioyen.co/wp-content/uploads/2016/06/EB01.jpg" class="attachment-full size-full wp-post-image" alt="" />
-										</a>
-										<a href="#">
-											Ichao Wang
-										</a>
-									</div>
-									<div class="item">
-										<a href="#">
-											<img src="https://www.studioyen.co/wp-content/uploads/2016/06/EB01.jpg" class="attachment-full size-full wp-post-image" alt="" />
-										</a>
-										<a href="#">
-											Ichao Wang
-										</a>
-									</div>
-								</div>
+
+								<?php endif; ?>
+								
 							</div>
 						</div>
 

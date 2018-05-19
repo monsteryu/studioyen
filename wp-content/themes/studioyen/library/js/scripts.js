@@ -5313,7 +5313,7 @@ jQuery(document).ready(function($) {
 
 	   	//detect if should hide logo
 		if($(".navbar.white").length>0){
-			if ($(".navbar.white").offset().top > 150) {
+			if ($(".navbar.white").offset().top > 90) {
 		        $('.logo').addClass('upper');
 		        $('.navbar, .sub-nav').addClass('show');
 		        $('.menu-item-white').hide();
